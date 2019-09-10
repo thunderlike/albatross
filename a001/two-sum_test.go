@@ -29,8 +29,8 @@ func TestTwoSum(t *testing.T) {
 
 	fmt.Printf("--------------------leetcode 001------------------")
 	for i := 0; i < len(targets); i++ {
-		fmt.Printf("nums = %v target = %v result = %v\n", tests[i], targets[i], twoSum(tests[i], targets[i]))
-		if ret := twoSum(tests[i], targets[i]); ret[0] != results[i][0] && ret[1] != results[i][1] {
+		fmt.Printf("nums = %v target = %v result = %v\n", tests[i], targets[i], twoSum1(tests[i], targets[i]))
+		if ret := twoSum1(tests[i], targets[i]); ret == nil || (ret[0] != results[i][0] && ret[1] != results[i][1]) {
 			t.Fatalf("case %d fails: %v\n", i, ret)
 		}
 	}
